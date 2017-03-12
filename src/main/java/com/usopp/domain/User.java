@@ -19,17 +19,17 @@ public class User extends Entitys implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(nullable = false, unique = true)
+    @Column(length = 20, nullable = false, unique = true)
     private String userName;
-    @Column(nullable = false)
+    @Column(length = 40, nullable = false)
     private String passWord;
-    @Column(nullable = false, unique = true)
+    @Column(length = 60, nullable = false, unique = true)
     private String email;
-    @Column(nullable = false, unique = true)
+    @Column(length = 13, nullable = false, unique = true)
     private String tellPhone;
     @Column(nullable = false)
     private String serialNumber;
-
+    @Column(columnDefinition = "创建时间")
     private Date createTime;
     @Column(columnDefinition = "最后更新时间")
     private Date lastModifyTime;
